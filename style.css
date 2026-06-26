@@ -1,4 +1,4 @@
-/* SMART MOBILE AI ASSISTANT DEMO WEBSITE CSS */
+/* SMART MOBILE AI ASSISTANT WEBSITE CSS */
 
 * {
   margin: 0;
@@ -34,10 +34,11 @@ body {
 }
 
 .nav-container {
-  height: 72px;
+  min-height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 18px;
 }
 
 .logo {
@@ -413,18 +414,42 @@ body {
 }
 
 @media (max-width: 520px) {
+  .nav-container {
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
   .nav-btn {
     display: none;
+  }
+
+  .hero {
+    padding: 70px 16px;
+    min-height: auto;
   }
 
   .hero h1 {
     font-size: 34px;
   }
 
+  .hero-text {
+    font-size: 16px;
+  }
+
   .section-title h2,
   .assistant-text h2,
   .contact-box h2 {
     font-size: 30px;
+  }
+
+  .services,
+  .assistant-section,
+  .how-it-works,
+  .contact-section {
+    padding: 60px 16px;
   }
 
   .footer-content {
