@@ -908,3 +908,29 @@ color:white;
     color: #f1f5f9 !important;
   }
 }
+/* MOBILE ONLY HERO CLEAN FIX */
+@media (max-width: 600px) {
+  .hero {
+    background: linear-gradient(135deg, #0f172a, #1d4ed8) !important;
+    padding: 45px 16px !important;
+  }
+
+  .hero-right {
+    display: block !important;
+  }
+
+  .hero-right img {
+    max-width: 230px !important;
+    margin: 25px auto 0 !important;
+  }
+
+  .hero h1 {
+    font-size: 36px !important;
+    line-height: 1.15 !important;
+  }
+
+  .hero-text {
+    font-size: 15px !important;
+    color: #e5e7eb !important;
+  }
+}
