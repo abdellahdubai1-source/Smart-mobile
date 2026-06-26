@@ -1,62 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smart Mobile</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Mobile | AI-Powered Mobile Phone Store in Dubai</title>
+  <meta name="description" content="Smart Mobile is Dubai's AI-powered phone store. Compare iPhones and Samsung devices, book repairs, shop accessories, and chat with our AI assistant on WhatsApp.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
- <header class="header">
-  <div class="container">
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
 
-    <div class="logo">
-      📱 <span>Smart Mobile</span>
-    </div>
+      <a href="#home" class="logo">
+        <span class="logo-mark">SM</span>
+        <span class="logo-text">Smart<span class="logo-text-accent">Mobile</span></span>
+      </a>
 
-    <nav class="menu">
-      <a href="#">Home</a>
-      <a href="#">Products</a>
-      <a href="#">Services</a>
-      <a href="#">AI Assistant</a>
-      <a href="#">Contact</a>
-    </nav>
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#products" class="nav-link">Phones</a></li>
+          <li class="nav-item"><a href="#ai-assistant" class="nav-link">AI Assistant</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#why-us" class="nav-link">Why Us</a></li>
+          <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
 
-    <a href="#" class="btn-header">
-      WhatsApp
-    </a>
+      <div class="header-actions">
+        <a href="https://wa.me/971581197208?text=Hi%20Smart%20Mobile%2C%20I%20would%20like%20to%20know%20more%20about%20your%20phones."
+           class="btn btn-whatsapp header-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+          <span class="icon-whatsapp" aria-hidden="true"></span>
+          <span class="whatsapp-btn-text">WhatsApp Us</span>
+        </a>
 
-  </div>
-</header>
-<section class="hero">
-  <div class="hero-container">
-
-    <div class="hero-text-box">
-      <div class="hero-badge">
-        🤖 AI Powered Mobile Store
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
       </div>
 
-      <h1>
-        Find Your Perfect Smartphone Faster
-      </h1>
+    </div>
+  </header>
 
-      <p>
-        Compare iPhone, Samsung, Xiaomi and more. Get smart buying advice,
-        repair guidance, accessory recommendations and WhatsApp support.
-      </p>
+  <main>
 
-      <div class="hero-buttons">
-        <a href="#" class="hero-btn primary">Shop Phones</a>
-        <a href="#" class="hero-btn secondary">Try AI Assistant</a>
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero" id="home">
+      <div class="container hero-container">
+
+        <div class="hero-content">
+          <span class="hero-eyebrow">AI-Powered Mobile Store · Dubai, UAE</span>
+          <h1 class="hero-title">
+            The smarter way to <span class="hero-title-highlight">buy your next phone</span>
+          </h1>
+          <p class="hero-description">
+            Compare the latest iPhones and Samsung Galaxy devices, get instant answers from our
+            AI Assistant, and book genuine repairs or trade-ins — all backed by real warranties
+            and a Smart Mobile team that replies on WhatsApp in minutes.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#products" class="btn btn-primary">Browse Phones</a>
+            <a href="https://wa.me/971581197208?text=Hi%20Smart%20Mobile%2C%20I%20need%20help%20choosing%20a%20phone."
+               class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              <span class="icon-whatsapp" aria-hidden="true"></span>
+              Chat on WhatsApp
+            </a>
+          </div>
+
+          <ul class="hero-trust-list">
+            <li class="hero-trust-item">12-Month Warranty</li>
+            <li class="hero-trust-item">100% Genuine Devices</li>
+            <li class="hero-trust-item">Same-Day Dubai Delivery</li>
+          </ul>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-media-glow" aria-hidden="true"></div>
+          <img src="iphone-16-pro-max.png" alt="iPhone 16 Pro Max available at Smart Mobile Dubai" class="hero-image">
+        </div>
+
       </div>
+    </section>
+
+    <!-- ============ BRAND STRIP ============ -->
+    <section class="brand-strip" aria-label="Brands we sell">
+      <div class="container brand-strip-container">
+        <ul class="brand-list">
+          <li class="brand-item">Apple</li>
+          <li class="brand-item">Samsung</li>
+          <li class="brand-item">Xiaomi</li>
+          <li class="brand-item">Honor</li>
+          <li class="brand-item">Google Pixel</li>
+          <li class="brand-item">Used Phones</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PRODUCTS ============ -->
+    <section class="products" id="products">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-eyebrow">Featured Devices</span>
+          <h2 class="section-title">Find your perfect phone</h2>
+          <p class="section-subtitle">
+            Hand-picked flagships and everyday favorites, all available with warranty and
+            flexible payment options across Dubai.
+          </p>
+        </div>
+
+        <div class="product-grid">
+
+          <article class="product-card">
+            <span class="product-badge product-badge-new">New</span>
+            <div class="product-image-wrap">
+              <img src="iphone-16-pro-max.png" alt="Apple iPhone 16 Pro Max" class="product-image">
+            </div>
+            <div class="product-info">
+              <span class="product-brand">Apple</span>
+              <h3 class="product-name">iPhone 16 Pro Max</h3>
+              <p class="product-specs">256GB · Titanium Design · A18 Pro Chip</p>
+              <div class="product-footer">
+                <span class="product-price">AED 5,499</span>
+                <a href="https://wa.me/971581197208?text=Hi%2C%20I%27m%20interested%20in%20the%20iPhone%2016%20Pro%20Max."
+                   class="btn btn-outline product-cta" target="_blank" rel="noopener noreferrer">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img src="iphone-15-pro.png" alt="Apple iPhone 15 Pro" class="product-image">
+            </div>
+            <div class="product-info">
+              <span class="product-brand">Apple</span>
+              <h3 class="product-name">iPhone 15 Pro</h3>
+              <p class="product-specs">128GB · Pro Camera System · A17 Pro Chip</p>
+              <div class="product-footer">
+                <span class="product-price">AED 3,899</span>
+                <a href="https://wa.me/971581197208?text=Hi%2C%20I%27m%20interested%20in%20the%20iPhone%2015%20Pro."
+                   class="btn btn-outline product-cta" target="_blank" rel="noopener noreferrer">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="product-badge product-badge-value">Best Value</span>
+            <div class="product-image-wrap">
+              <img src="iphone-13.png" alt="Apple iPhone 13" class="product-image">
+            </div>
+            <div class="product-info">
+              <span class="product-brand">Apple</span>
+              <h3 class="product-name">iPhone 13</h3>
+              <p class="product-specs">128GB · A15 Bionic Chip · Dual Camera</p>
+              <div class="product-footer">
+                <span class="product-price">AED 1,999</span>
+                <a href="https://wa.me/971581197208?text=Hi%2C%20I%27m%20interested%20in%20the%20iPhone%2013."
+                   class="btn btn-outline product-cta" target="_blank" rel="noopener noreferrer">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="product-badge product-badge-new">New</span>
+            <div class="product-image-wrap">
+              <img src="samsung-s25-ultra.png" alt="Samsung Galaxy S25 Ultra" class="product-image">
+            </div>
+            <div class="product-info">
+              <span class="product-brand">Samsung</span>
+              <h3 class="product-name">Galaxy S25 Ultra</h3>
+              <p class="product-specs">256GB · S Pen Included · 200MP Camera</p>
+              <div class="product-footer">
+                <span class="product-price">AED 4,999</span>
+                <a href="https://wa.me/971581197208?text=Hi%2C%20I%27m%20interested%20in%20the%20Samsung%20Galaxy%20S25%20Ultra."
+                   class="btn btn-outline product-cta" target="_blank" rel="noopener noreferrer">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img src="samsung-galaxy-a55.png" alt="Samsung Galaxy A55" class="product-image">
+            </div>
+            <div class="product-info">
+              <span class="product-brand">Samsung</span>
+              <h3 class="product-name">Galaxy A55</h3>
+              <p class="product-specs">128GB · AMOLED Display · All-Day Battery</p>
+              <div class="product-footer">
+                <span class="product-price">AED 1,399</span>
+                <a href="https://wa.me/971581197208?text=Hi%2C%20I%27m%20interested%20in%20the%20Samsung%20Galaxy%20A55."
+                   class="btn btn-outline product-cta" target="_blank" rel="noopener noreferrer">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="product-badge product-badge-new">New</span>
+            <div class="product-image-wrap">
+              <img src="samsung-galaxy-z-fold-6.png" alt="Samsung Galaxy Z Fold 6" class="product-image">
+            </div>
+            <div class="product-info">
+              <span class="product-brand">Samsung</span>
+              <h3 class="product-name">Galaxy Z Fold 6</h3>
+              <p class="product-specs">512GB · Foldable Display · Multitasking Pro</p>
+              <div class="product-footer">
+                <span class="product-price">AED 6,799</span>
+                <a href="https://wa.me/971581197208?text=Hi%2C%20I%27m%20interested%20in%20the%20Samsung%20Galaxy%20Z%20Fold%206."
+                   class="btn btn-outline product-cta" target="_blank" rel="noopener noreferrer">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="products-footer">
+          <a href="https://wa.me/971581197208?text=Hi%2C%20I%27d%20like%20to%20see%20your%20full%20phone%20catalog."
+             class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Full Catalog on WhatsApp</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ AI ASSISTANT SECTION ============ -->
+    <section class="ai-assistant" id="ai-assistant">
+      <div class="container ai-assistant-container">
+
+        <div class="ai-assistant-content">
+          <span class="section-eyebrow section-eyebrow-light">Smart Mobile AI</span>
+          <h2 class="section-title section-title-light">Ask our AI Assistant anything</h2>
+          <p class="ai-assistant-description">
+            Not sure which phone fits your budget? Wondering if your screen repair is covered
+            under warranty? Our AI Assistant gives instant, accurate answers — then connects you
+            to a real Smart Mobile specialist on WhatsApp whenever you need one.
+          </p>
+
+          <div class="ai-quick-actions" id="ai-quick-actions">
+            <button type="button" class="ai-quick-btn" data-ai-query="Compare iPhone 16 Pro Max vs Samsung S25 Ultra">
+              Compare Phones
+            </button>
+            <button type="button" class="ai-quick-btn" data-ai-query="How much does a screen repair cost?">
+              Repair Pricing
+            </button>
+            <button type="button" class="ai-quick-btn" data-ai-query="What warranty do you offer on used phones?">
+              Warranty Info
+            </button>
+            <button type="button" class="ai-quick-btn" data-ai-query="What accessories do you recommend for iPhone 16 Pro Max?">
+              Accessories
+            </button>
+          </div>
+
+          <a href="https://wa.me/971581197208?text=Hi%2C%20I%27d%20like%20to%20chat%20with%20the%20Smart%20Mobile%20AI%20Assistant."
+             class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Start Chatting</a>
+        </div>
+
+        <div class="ai-chat-preview" id="ai-chat-preview">
+          <div class="ai-chat-header">
+            <span class="ai-chat-status-dot" aria-hidden="true"></span>
+            <span class="ai-chat-title">Smart Mobile Assistant</span>
+          </div>
+
+          <div class="ai-chat-body" id="ai-chat-body">
+            <div class="chat-message chat-message-bot">
+              <p>Hi! I'm your Smart Mobile AI Assistant. Ask me about phones, repairs, accessories, or warranties.</p>
+            </div>
+            <div class="chat-message chat-message-user">
+              <p>Which is better for camera, iPhone 16 Pro Max or S25 Ultra?</p>
+            </div>
+            <div class="chat-message chat-message-bot">
+              <p>Both are flagship cameras. The S25 Ultra leads in zoom with its 200MP sensor, while the iPhone 16 Pro Max leads in video and color accuracy. Want a full side-by-side comparison?</p>
+            </div>
+          </div>
+
+          <div class="ai-chat-input-row">
+            <input type="text" class="ai-chat-input" id="ai-chat-input" placeholder="Type your question..." aria-label="Ask the AI assistant a question">
+            <button type="button" class="ai-chat-send-btn" id="ai-chat-send-btn" aria-label="Send message">Send</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SERVICES SECTION ============ -->
+    <section class="services" id="services">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-eyebrow">What We Offer</span>
+          <h2 class="section-title">Everything for your phone, in one place</h2>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card">
+            <div class="service-icon service-icon-new" aria-hidden="true"></div>
+            <h3 class="service-title">New Phones</h3>
+            <p class="service-description">
+              The latest flagships from Apple and Samsung, sealed and brand new with full
+              manufacturer warranty.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon service-icon-used" aria-hidden="true"></div>
+            <h3 class="service-title">Used Phones</h3>
+            <p class="service-description">
+              Certified pre-owned devices, fully tested and graded, with a Smart Mobile warranty
+              on every unit.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon service-icon-repair" aria-hidden="true"></div>
+            <h3 class="service-title">Repairs</h3>
+            <p class="service-description">
+              Screen, battery, and camera repairs using genuine parts, with most jobs completed
+              the same day.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon service-icon-accessories" aria-hidden="true"></div>
+            <h3 class="service-title">Accessories</h3>
+            <p class="service-description">
+              Cases, chargers, screen protectors, and audio gear hand-picked to match your
+              device.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US SECTION ============ -->
+    <section class="why-us" id="why-us">
+      <div class="container why-us-container">
+
+        <div class="why-us-media">
+          <img src="samsung-galaxy-z-fold-6.png" alt="Samsung Galaxy Z Fold 6 displayed at Smart Mobile" class="why-us-image">
+        </div>
+
+        <div class="why-us-content">
+          <span class="section-eyebrow">Why Smart Mobile</span>
+          <h2 class="section-title">Built on trust, backed by warranty</h2>
+
+          <ul class="why-us-list">
+            <li class="why-us-item">
+              <h3 class="why-us-item-title">Genuine Devices Only</h3>
+              <p class="why-us-item-text">Every phone is verified authentic before it reaches you.</p>
+            </li>
+            <li class="why-us-item">
+              <h3 class="why-us-item-title">AI-Powered Guidance</h3>
+              <p class="why-us-item-text">Get instant, unbiased comparisons before you decide.</p>
+            </li>
+            <li class="why-us-item">
+              <h3 class="why-us-item-title">Real Warranty Coverage</h3>
+              <p class="why-us-item-text">Every new and used phone ships with documented warranty terms.</p>
+            </li>
+            <li class="why-us-item">
+              <h3 class="why-us-item-title">Fast Dubai-Wide Delivery</h3>
+              <p class="why-us-item-text">Order on WhatsApp and receive your phone the same day.</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS SECTION ============ -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-eyebrow">Customer Stories</span>
+          <h2 class="section-title">Trusted by phone buyers across Dubai</h2>
+        </div>
+
+        <div class="testimonials-grid">
+
+          <article class="testimonial-card">
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-text">
+              The AI Assistant helped me pick between two models in minutes, and the WhatsApp
+              team handled delivery the same evening.
+            </p>
+            <p class="testimonial-author">Ahmed K. — Dubai Marina</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-text">
+              My iPhone screen was fixed in under an hour with original parts. Honest pricing
+              and no surprises.
+            </p>
+            <p class="testimonial-author">Sara M. — Jumeirah</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-text">
+              Bought a certified used Galaxy and it came with a real warranty card. Exactly as
+              described.
+            </p>
+            <p class="testimonial-author">Rashid A. — Deira</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ SECTION ============ -->
+    <section class="faq" id="faq">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-eyebrow">Got Questions?</span>
+          <h2 class="section-title">Frequently asked questions</h2>
+        </div>
+
+        <div class="faq-list" id="faq-list">
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Do you sell genuine, original phones?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Every device sold by Smart Mobile is 100% genuine and verified before sale, whether new or certified pre-owned.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>What warranty comes with used phones?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>All certified used phones include a Smart Mobile warranty covering hardware faults. Exact terms depend on the device and condition grade.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>How long do repairs take?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Most screen and battery repairs are completed the same day, often within 1–2 hours depending on the model and parts in stock.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Do you deliver across Dubai?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, we offer same-day delivery across Dubai for orders placed and confirmed via WhatsApp.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Can the AI Assistant help me choose a phone?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely. The AI Assistant compares specs, prices, and use cases instantly, and can hand you off to a sales specialist on WhatsApp at any point.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section class="contact" id="contact">
+      <div class="container contact-container">
+
+        <div class="contact-content">
+          <span class="section-eyebrow">Get In Touch</span>
+          <h2 class="section-title">Visit us or chat now</h2>
+          <p class="contact-description">
+            Our Dubai showroom team and AI Assistant are ready to help you choose, repair, or
+            upgrade your phone.
+          </p>
+
+          <ul class="contact-info-list">
+            <li class="contact-info-item">
+              <span class="contact-info-label">Location</span>
+              <span class="contact-info-value">Smart Mobile Store, Al Maktoum Road, Deira, Dubai, UAE</span>
+            </li>
+            <li class="contact-info-item">
+              <span class="contact-info-label">WhatsApp</span>
+              <span class="contact-info-value">+971 58 119 7208</span>
+            </li>
+            <li class="contact-info-item">
+              <span class="contact-info-label">Hours</span>
+              <span class="contact-info-value">Daily, 10:00 AM – 11:00 PM</span>
+            </li>
+          </ul>
+
+          <a href="https://wa.me/971581197208?text=Hi%20Smart%20Mobile%2C%20I%27d%20like%20to%20visit%20your%20store."
+             class="btn btn-whatsapp contact-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+            <span class="icon-whatsapp" aria-hidden="true"></span>
+            Message Us on WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-map" id="contact-map">
+          <iframe
+            class="contact-map-frame"
+            title="Smart Mobile location in Dubai"
+            src="https://www.google.com/maps?q=Deira,Dubai,UAE&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+
+      <div class="footer-brand">
+        <a href="#home" class="logo footer-logo">
+          <span class="logo-mark">SM</span>
+          <span class="logo-text">Smart<span class="logo-text-accent">Mobile</span></span>
+        </a>
+        <p class="footer-tagline">Dubai's AI-powered mobile phone store.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3 class="footer-heading">Quick Links</h3>
+        <ul class="footer-link-list">
+          <li><a href="#products" class="footer-link">Phones</a></li>
+          <li><a href="#services" class="footer-link">Services</a></li>
+          <li><a href="#ai-assistant" class="footer-link">AI Assistant</a></li>
+          <li><a href="#faq" class="footer-link">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3 class="footer-heading">Services</h3>
+        <ul class="footer-link-list">
+          <li><a href="#services" class="footer-link">New Phones</a></li>
+          <li><a href="#services" class="footer-link">Used Phones</a></li>
+          <li><a href="#services" class="footer-link">Repairs</a></li>
+          <li><a href="#services" class="footer-link">Accessories</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3 class="footer-heading">Contact</h3>
+        <p class="footer-contact-text">Al Maktoum Road, Deira, Dubai, UAE</p>
+        <a href="https://wa.me/971581197208" class="footer-whatsapp-link" target="_blank" rel="noopener noreferrer">
+          +971 58 119 7208
+        </a>
+      </div>
+
     </div>
 
-    <div class="hero-image-box">
-      <img src="iphone-16-pro-max.png" alt="iPhone 16 Pro Max">
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Smart Mobile. All rights reserved.</p>
     </div>
+  </footer>
 
-  </div>
-</section>
+  <!-- ============ STICKY WHATSAPP BUTTON ============ -->
+  <a href="https://wa.me/971581197208?text=Hi%20Smart%20Mobile%2C%20I%20have%20a%20question."
+     class="whatsapp-float-btn" id="whatsapp-float-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with Smart Mobile on WhatsApp">
+    <span class="icon-whatsapp" aria-hidden="true"></span>
+  </a>
+
+  <script src="script.js"></script>
+
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="bvPCvkwm-2iPTnFweN5DM";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
 </body>
 </html>
