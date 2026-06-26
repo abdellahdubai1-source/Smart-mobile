@@ -934,3 +934,37 @@ color:white;
     color: #e5e7eb !important;
   }
 }
+/* MOBILE HERO FIX */
+@media (max-width: 768px) {
+
+.hero{
+    min-height:auto !important;
+    padding:60px 20px 0 !important;
+}
+
+.hero-content{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.hero-left{
+    order:1;
+    text-align:center;
+}
+
+.hero-right{
+    order:2;
+    margin-top:20px;
+    margin-bottom:-120px;
+    text-align:center;
+}
+
+.hero-right img{
+    width:260px !important;
+    max-width:90%;
+    display:block;
+    margin:auto;
+}
+
+}
