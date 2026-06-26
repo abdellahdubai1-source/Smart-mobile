@@ -842,3 +842,36 @@ color:white;
     margin-top: 10px !important;
   }
 }
+/* CLEAN MOBILE HERO LAYOUT */
+@media (max-width: 600px) {
+  .hero {
+    padding: 35px 16px 35px !important;
+  }
+
+  .hero-content {
+    gap: 18px !important;
+  }
+
+  .hero h1 {
+    font-size: 34px !important;
+  }
+
+  .hero-text {
+    font-size: 15px !important;
+    color: #e5e7eb !important;
+    margin-bottom: 16px !important;
+  }
+
+  .hero-buttons {
+    margin-bottom: 10px !important;
+  }
+
+  .hero-right img {
+    max-width: 210px !important;
+    margin-top: 0 !important;
+  }
+
+  .hero-trust {
+    display: none !important;
+  }
+}
