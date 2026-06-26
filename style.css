@@ -798,3 +798,47 @@ color:white;
 .nav-btn:hover {
   transform: translateY(-2px);
 }
+/* FINAL MOBILE HERO FIX */
+@media (max-width: 600px) {
+  .hero {
+    padding: 35px 16px 45px !important;
+    min-height: auto !important;
+  }
+
+  .hero-content {
+    gap: 25px !important;
+  }
+
+  .badge {
+    font-size: 13px !important;
+    padding: 8px 14px !important;
+  }
+
+  .hero h1 {
+    font-size: 36px !important;
+    line-height: 1.12 !important;
+    margin: 18px 0 !important;
+  }
+
+  .hero-text {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    color: #e5e7eb !important;
+    margin-bottom: 22px !important;
+  }
+
+  .hero-buttons {
+    gap: 12px !important;
+  }
+
+  .hero-buttons .btn,
+  .hero-buttons .secondary-btn {
+    width: 100%;
+    padding: 14px 20px !important;
+  }
+
+  .hero-right img {
+    max-width: 230px !important;
+    margin-top: 10px !important;
+  }
+}
