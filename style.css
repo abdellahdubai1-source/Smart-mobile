@@ -875,3 +875,36 @@ color:white;
     display: none !important;
   }
 }
+/* HERO IMAGE AS BACKGROUND */
+.hero {
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.75), rgba(37, 99, 235, 0.65)),
+    url("iphone-16-pro-max.png");
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.hero-right {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    background:
+      linear-gradient(rgba(15, 23, 42, 0.82), rgba(37, 99, 235, 0.72)),
+      url("iphone-16-pro-max.png");
+    background-size: 85%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 260px !important;
+  }
+
+  .hero h1 {
+    font-size: 38px !important;
+  }
+
+  .hero-text {
+    color: #f1f5f9 !important;
+  }
+}
