@@ -493,6 +493,35 @@
   }
 
   /* -----------------------------------------------------------------
+     11. CHATBASE "START CHATTING" TRIGGER
+     Clicking the "Start Chatting" button inside the AI Assistant
+     section opens the Chatbase chatbot popup directly, instead of
+     navigating away. Falls back to a short alert if the Chatbase
+     embed script hasn't loaded yet.
+     ----------------------------------------------------------------- */
+  function initChatbaseStartChat() {
+    const aiSection = document.getElementById('ai-assistant');
+    if (!aiSection) return;
+
+    const startChatBtn = Array.from(
+      aiSection.querySelectorAll('a, button')
+    ).find((el) => el.textContent.trim() === 'Start Chatting');
+
+    if (!startChatBtn) return;
+
+    startChatBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // Safe check: only call Chatbase if it has actually loaded
+      if (typeof window.chatbase === 'function') {
+        window.chatbase('open');
+      } else {
+        alert('AI Assistant is loading. Please try again in a few seconds.');
+      }
+    });
+  }
+
+  /* -----------------------------------------------------------------
      10. WHATSAPP LINKS
      Ensures every WhatsApp button/link opens the correct number in
      a new tab safely, regardless of which element it is.
@@ -527,5 +556,6 @@
     initRevealOnScroll();
     initAiQuickActions();
     initWhatsAppLinks();
+    initChatbaseStartChat();
   });
 })();
