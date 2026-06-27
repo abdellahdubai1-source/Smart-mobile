@@ -493,12 +493,20 @@
   }
 
   /* -----------------------------------------------------------------
-     11. CHATBASE "START CHATTING" TRIGGER
-     Clicking the "Start Chatting" button inside the AI Assistant
-     section opens the Chatbase chatbot popup directly, instead of
-     navigating away. Falls back to a short alert if the Chatbase
+     11. CHATBASE POPUP TRIGGERS
+     Shared helper that safely opens the Chatbase chatbot popup, used
+     by both the "Start Chatting" button and the AI chat preview's
+     input/send button. Falls back to a short alert if the Chatbase
      embed script hasn't loaded yet.
      ----------------------------------------------------------------- */
+  function openChatbasePopup() {
+    if (typeof window.chatbase === 'function') {
+      window.chatbase('open');
+    } else {
+      alert('AI Assistant is loading. Please try again in a few seconds.');
+    }
+  }
+
   function initChatbaseStartChat() {
     const aiSection = document.getElementById('ai-assistant');
     if (!aiSection) return;
@@ -511,12 +519,29 @@
 
     startChatBtn.addEventListener('click', (e) => {
       e.preventDefault();
+      openChatbasePopup();
+    });
+  }
 
-      // Safe check: only call Chatbase if it has actually loaded
-      if (typeof window.chatbase === 'function') {
-        window.chatbase('open');
-      } else {
-        alert('AI Assistant is loading. Please try again in a few seconds.');
+  // Typing a message in the AI chat preview and clicking "Send" (or
+  // pressing Enter) opens the real Chatbase popup instead of just
+  // simulating a reply in the static preview.
+  function initChatbaseFromChatPreview() {
+    const chatInput = document.getElementById('ai-chat-input');
+    const sendBtn = document.getElementById('ai-chat-send-btn');
+    if (!chatInput || !sendBtn) return;
+
+    const triggerChatbase = () => {
+      if (!chatInput.value.trim()) return;
+      openChatbasePopup();
+    };
+
+    sendBtn.addEventListener('click', triggerChatbase);
+
+    chatInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        triggerChatbase();
       }
     });
   }
@@ -557,5 +582,6 @@
     initAiQuickActions();
     initWhatsAppLinks();
     initChatbaseStartChat();
+    initChatbaseFromChatPreview();
   });
 })();
