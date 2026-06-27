@@ -316,15 +316,40 @@
      6. TESTIMONIAL SLIDER
      Auto-advances every 5s, supports prev/next buttons, dot
      indicators, pause-on-hover, and touch swipe on mobile.
+
+     BUG FIX: testimonials 2 and 3 were getting stuck invisible
+     because the reveal-on-scroll observer (see initRevealOnScroll)
+     was also watching .testimonial-card and waiting for it to enter
+     the viewport before removing its opacity:0 state. Since slides
+     2 and 3 sit off-screen (clipped by overflow:hidden) until the
+     slider brings them into view, the observer's timing was
+     unreliable and they often never lit up. The slider now (a)
+     forces every card to full opacity/visibility up front, since it
+     alone is responsible for showing/hiding slides via transform,
+     and (b) guards against being initialized twice, which would
+     otherwise create duplicate controls and break the slide index.
      ----------------------------------------------------------------- */
   function initTestimonialSlider() {
     const grid = document.querySelector('.testimonials-grid');
     if (!grid) return;
 
+    // Prevent double-initialization (duplicate controls/listeners)
+    if (grid.classList.contains('is-slider')) return;
+
     const cards = Array.from(grid.children).filter((el) =>
       el.classList.contains('testimonial-card')
     );
     if (cards.length < 2) return;
+
+    // Each slide's visibility is controlled entirely by the slider's
+    // own transform — make sure no other script/observer is holding
+    // any card at opacity:0.
+    cards.forEach((card) => {
+      card.classList.remove('js-reveal');
+      card.classList.add('is-visible');
+      card.style.opacity = '';
+      card.style.transform = '';
+    });
 
     grid.classList.add('is-slider');
 
@@ -428,9 +453,10 @@
 
   /* -----------------------------------------------------------------
      7. REVEAL ON SCROLL
-     Fades/slides product cards, service cards, the AI section,
-     testimonials, and the contact section into view as they enter
-     the viewport, using Intersection Observer.
+     Fades/slides product cards, service cards, the AI section, and
+     the contact section into view as they enter the viewport, using
+     Intersection Observer. Testimonial cards are intentionally
+     excluded here — see initTestimonialSlider() below for why.
      ----------------------------------------------------------------- */
   function initRevealOnScroll() {
     const selectors = [
@@ -438,7 +464,6 @@
       '.service-card',
       '.ai-assistant-content',
       '.ai-chat-preview',
-      '.testimonial-card',
       '.contact-content',
       '.contact-map',
     ];
